@@ -1,0 +1,50 @@
+﻿<Window x:Class="WPFforelasning20oktober.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFforelasning20oktober"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Programmerare">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="119*"/>
+                        <ColumnDefinition Width="675*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Name="Load" Content="Load file" HorizontalAlignment="Left" Margin="35,90,0,0" VerticalAlignment="Top" Height="42" Width="151" Click="Load_Click" Grid.ColumnSpan="2"/>
+                    <Button Name="Save" Content="Save file" HorizontalAlignment="Left" Margin="35,0,0,0" VerticalAlignment="Center" Height="42" Width="151" Click="Save_Click" Grid.ColumnSpan="2"/>
+                    <TextBox Name ="myTextBox" HorizontalAlignment="Left" Margin="110,10,0,0" TextWrapping="Wrap" Text="Waiting..." VerticalAlignment="Top" Width="520" Height="403" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Managers">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Klass?" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"/>
+                    <TextBox Name ="klassTextBox" Grid.Row="0" Grid.Column="1" Margin="10"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Techniques?" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"/>
+                    <TextBox Name ="techniquessTextBox" Grid.Row="1" Grid.Column="1" Margin="10"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Meddelande?" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"/>
+                    <TextBox Name ="meddelandeTextBox" Grid.Row="2" Grid.Column="1" Margin="10"/>
+                    <RadioButton Content="röd" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Height="20" Margin="32,10,0,0" Checked="Action"/>
+                    <Button Grid.Column="1" Name="Save2" Content="Save HTML" HorizontalAlignment="Left" Margin="479,18,0,0" Grid.Row="3" VerticalAlignment="Top" Height="59" Width="121" Click="Save2_Click"/>
+                    <RadioButton Content="blå" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Height="20" Margin="0,71,0,0" Checked="Action"/>
+                    <RadioButton Content="gul" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Height="20" Margin="0,38,0,0" Checked="Action"/>
+                    <Label Grid.Column="1" Name="myLabel" Content="" HorizontalAlignment="Left" Margin="23,29,0,0" Grid.Row="3" VerticalAlignment="Top" Height="29" Width="159"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
